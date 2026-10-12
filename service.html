@@ -44,10 +44,8 @@
       <a id="back-link" class="inline-flex items-center gap-2 text-sm text-[#666666] hover:text-[#111215] transition-colors mb-12" href="code.html#ways-to-work">← Back to ways to start</a>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-end">
         <div class="lg:col-span-8">
-          <span id="eyebrow" class="text-xs font-mono text-[#5B6F95] tracking-wider uppercase"></span>
-          <h1 id="title" class="text-4xl sm:text-6xl lg:text-7xl font-medium tracking-headline leading-[1.05] mt-5 mb-7"></h1>
+          <h1 id="title" class="text-4xl sm:text-6xl lg:text-7xl font-medium tracking-headline leading-[1.05] mb-7"></h1>
           <p id="lead" class="text-lg sm:text-xl text-[#666666] leading-relaxed max-w-3xl"></p>
-          <p id="role-fit" class="mt-5 text-sm text-[#5B6F95] leading-relaxed max-w-3xl"></p>
         </div>
         <div class="lg:col-span-4 border-t border-[#E7E8EB] pt-6">
           <div class="text-xs uppercase tracking-wider text-[#999999] mb-3" id="side-label"></div>
@@ -135,68 +133,64 @@
     const offers = {
       'profit-leak-audit': {
         en: {
-          eyebrow: '01 / Profit Leak Audit', title: 'Profit Leak Audit',
+          title: 'Profit Leak Audit',
           lead: "For founders who can feel money and time leaking, but can't yet say where, or what to fix first.",
-          roleFit: 'You leave with your Money Map: where money and founder time leak, a rough cost for each, and the one to fix first.',
           sideLabel: 'Timeline', sideText: '3 weeks',
           fitLabel: 'When it is right', fitTitle: 'You see the symptoms. You need the priority',
           fitText: "Margin, cash, stock or the team's routine are costing more than they should, but it is not clear which part to fix first. You need a ranked answer before you spend money on tools or builds.",
           signalsLabel: 'What this is solving', signalsTitle: 'Money is leaking in more than one place',
           signals: ['Sales are growing, but profit per order is not growing with them', 'The cash number changes depending on who sends it', 'Stock, write-offs or retailer payments are tracked by hand, if at all', 'The founder sets priorities alone because there is no shared picture'],
-          stepsLabel: 'How it works', stepsTitle: 'Three weeks from symptoms to a ranked map',
+          stepsLabel: 'How it works', stepsTitle: 'Three weeks to a clear priority',
           steps: [
-            ['Week 1. See how the brand runs', "You show me how sales, stock, finance and the team's routine work today, on your screen. I review 4–7 processes or areas with the people closest to the work."],
-            ['Week 2. Find and price the leaks', 'We trace where money, margin and founder time leak, and put a rough cost on each one, as a range.'],
-            ['Week 3. Rank and decide', 'You get the Money Map: what to fix first, what can wait and what not to automate, with a short brief for the first priority.']
+            ['Week 1. We look at how the brand runs', "You show me sales, stock, finance and the team's routine on your screen."],
+            ['Week 2. We find and price the leaks', 'Each one gets a rough cost, as a range.'],
+            ['Week 3. We set priorities', 'You get the Money Map: what to fix first, what can wait and what not to automate.']
           ],
           includesLabel: 'What you receive', includesTitle: 'Your Money Map',
           items: ['A map of 4–7 processes or areas and where they leak money or founder time', 'A rough cost for each leak, as a range', 'A ranked list: fix now, fix later, do not automate', 'A short brief for the first priority, ready for Money on the Table'],
           boundariesLabel: 'What this is and is not', boundariesTitle: 'A clear map, not a build',
           boundaries: ['This is an audit and prioritisation, not an implementation project', 'No access to your systems is needed to start: you show, I map', 'The costs are estimates, given as ranges, to help you decide. They are not a promise of savings'],
-          transition: 'Continue to Money on the Table within 30 days and the full audit fee is credited.',
+          transition: 'Move to Money on the Table within 30 days and the audit costs you nothing.',
           ctaLabel: 'Start here', ctaTitle: 'Find out where the money goes',
           ctaText: "Book a 30-minute call. We'll see whether the audit is the right starting point for your business."
         },
         ua: {
-          eyebrow: '01 / Profit Leak Audit', title: 'Profit Leak Audit',
-          lead: 'Для засновників, які відчувають, що гроші й час витікають, але ще не можуть сказати, де саме і що виправляти першим.',
-          roleFit: 'Ви отримуєте Money Map: де витікають гроші й час засновника, приблизну вартість кожного витоку і те, що виправляти першим.',
+          title: 'Profit Leak Audit',
+          lead: 'Для засновників, які відчувають, що втрачають гроші й час, але ще не можуть сказати, де саме і що виправляти першим.',
           sideLabel: 'Строк', sideText: '3 тижні',
           fitLabel: 'Коли це підходить', fitTitle: 'Симптоми видно. Потрібен пріоритет',
           fitText: 'Маржа, гроші, склад або рутина команди коштують більше, ніж мали б, але незрозуміло, що виправляти першим. Потрібна відповідь за пріоритетами до того, як витрачати гроші на інструменти чи побудову.',
-          signalsLabel: 'Яку проблему вирішуємо', signalsTitle: 'Гроші витікають більше ніж в одному місці',
+          signalsLabel: 'Яку проблему вирішуємо', signalsTitle: 'Гроші втрачаються більше ніж в одному місці',
           signals: ['Продажі зростають, але прибуток з кожного замовлення не зростає разом із ними', 'Цифра по грошах змінюється залежно від того, хто її надсилає', 'Залишки, списання чи оплати рітейлерів відстежуються вручну або не відстежуються взагалі', 'Засновник сам визначає пріоритети, бо немає спільної картини'],
-          stepsLabel: 'Як це працює', stepsTitle: 'Три тижні від симптомів до мапи пріоритетів',
+          stepsLabel: 'Як це працює', stepsTitle: 'Три тижні до чіткого пріоритету',
           steps: [
-            ['Тиждень 1. Дивимося, як працює бренд', 'Ви показуєте на своєму екрані, як зараз працюють продажі, склад, фінанси й рутина команди. Я розбираю 4–7 процесів або напрямів разом із людьми, які найближче до роботи.'],
-            ['Тиждень 2. Знаходимо й оцінюємо витоки', 'Відстежуємо, де витікають гроші, маржа й час засновника, і даємо кожному витоку приблизну вартість, діапазоном.'],
-            ['Тиждень 3. Розставляємо пріоритети', 'Ви отримуєте Money Map: що виправляти першим, що почекає і що не автоматизувати, плюс короткий бриф для першого пріоритету.']
+            ['Тиждень 1. Дивимося, як працює бренд', 'Ви показуєте на екрані продажі, склад, фінанси й рутину команди.'],
+            ['Тиждень 2. Знаходимо й оцінюємо втрати', 'Кожна втрата отримує приблизну вартість, діапазоном.'],
+            ['Тиждень 3. Розставляємо пріоритети', 'Ви отримуєте Money Map: що виправляти першим, що почекає і що не автоматизувати.']
           ],
           includesLabel: 'Що ви отримуєте', includesTitle: 'Ваша Money Map',
-          items: ['Мапу 4–7 процесів або напрямів і того, де вони втрачають гроші чи час засновника', 'Приблизну вартість кожного витоку, діапазоном', 'Список пріоритетів: виправити зараз, пізніше, не автоматизувати', 'Короткий бриф для першого пріоритету, готовий до Money on the Table'],
+          items: ['Мапу 4–7 процесів або напрямів і того, де вони втрачають гроші чи час засновника', 'Приблизну вартість кожної втрати, діапазоном', 'Список пріоритетів: виправити зараз, пізніше, не автоматизувати', 'Короткий бриф для першого пріоритету, готовий до Money on the Table'],
           boundariesLabel: 'Що це і чого тут немає', boundariesTitle: 'Чітка мапа, а не побудова',
-          boundaries: ['Це аудит і пріоритизація, а не проєкт з упровадження', 'Для старту не потрібен доступ до ваших систем: ви показуєте, я складаю мапу', 'Вартість витоків це оцінка діапазоном, щоб допомогти ухвалити рішення. Це не обіцянка економії'],
-          transition: 'Якщо протягом 30 днів переходите до Money on the Table, вартість аудиту зараховується повністю.',
+          boundaries: ['Це аудит і пріоритизація, а не проєкт з упровадження', 'Для старту не потрібен доступ до ваших систем: ви показуєте, я складаю мапу', 'Вартість втрат це оцінка діапазоном, щоб допомогти ухвалити рішення. Це не обіцянка економії'],
+          transition: 'Перейдете до Money on the Table протягом 30 днів, і аудит вам нічого не коштуватиме.',
           ctaLabel: 'Почніть тут', ctaTitle: 'Дізнайтеся, куди йдуть гроші',
           ctaText: 'Забронюйте 30-хвилинний дзвінок. Разом визначимо, чи аудит є правильною точкою старту для вашого бізнесу.'
         }
       },
       'money-on-the-table': {
         en: {
-          eyebrow: '02 / Money on the Table', title: 'Money on the Table',
+          title: 'Money on the Table',
           lead: "One process, fixed end to end: designed with you, built into your team's real work and checked against one number.",
-          roleFit: 'This may be an AI Finance Operations Manager, AI Inventory & Expiry Manager, AI Retail Partner Manager or another role built around your process.',
           sideLabel: 'Timeline', sideText: '4-6 weeks to launch + 30-day check',
           fitLabel: 'When it is right', fitTitle: "You know what's costing you the most",
           fitText: "You know which process is limiting margin, cash or team capacity. You don't need another review. You need that one process rebuilt and measured.",
           signalsLabel: 'What this is solving', signalsTitle: 'One process is holding the business back',
           signals: ['Revenue is growing, but margin is not growing with it', 'Sales, finance and operations are working from different versions of the same number', 'The founder remains the final approval point for exceptions and decisions', 'The process works because of strong people, but does not survive handover to a new team', 'Manual reconciliation and checking consume capacity that should go into growth'],
-          stepsLabel: 'How it works', stepsTitle: 'Four steps, paid in two parts',
+          stepsLabel: 'How it works', stepsTitle: 'Three steps, paid in two parts',
           steps: [
-            ['Weeks 1-2. Design', 'We map how the process runs today, agree how it should run and pick one number to measure. You approve the plan before anything is built.'],
-            ['Weeks 3-6. Build', "I build the system into your team's real work and test it on live cases."],
-            ['Handover', 'Your team gets the system, the rules and the number to watch.'],
-            ['30 days after launch', 'We check the result against the agreed number.']
+            ['Weeks 1-2. We design the fix', 'You approve the plan before anything is built.'],
+            ['Weeks 3-6. I build it and hand it over', "Built into your team's real work and tested on live cases."],
+            ['30 days later. We check the number', 'Against the one we agreed at the start.']
           ],
           includesLabel: 'What is included', includesTitle: 'One system that runs without you',
           items: ['One process that no longer depends on manual founder control', 'Agreed rules, ownership and data across the teams involved', 'One primary measure that makes the outcome visible', 'AI and automation only where they reduce cost or increase capacity', 'A working system handed over to the team and reviewed after 30 days'],
@@ -207,20 +201,18 @@
           ctaText: 'Bring the process you want to improve, or the problem you want to understand, and we will decide whether Money on the Table is the right fit.'
         },
         ua: {
-          eyebrow: '02 / Money on the Table', title: 'Money on the Table',
+          title: 'Money on the Table',
           lead: 'Один процес, виправлений від початку до кінця: спроєктований разом із вами, вбудований у реальну роботу команди й перевірений за однією цифрою.',
-          roleFit: 'Це може бути AI Finance Operations Manager, AI Inventory & Expiry Manager, AI Retail Partner Manager або інша роль, створена під ваш процес.',
           sideLabel: 'Строк', sideText: '4-6 тижнів до запуску + перевірка через 30 днів',
           fitLabel: 'Коли це підходить', fitTitle: 'Ви знаєте, що коштує вам найбільше',
           fitText: 'Ви знаєте, який процес стримує маржу, гроші або ресурс команди. Ще один огляд не потрібен. Потрібно перебудувати саме цей процес і виміряти результат.',
           signalsLabel: 'Яку проблему вирішуємо', signalsTitle: 'Один процес стримує бізнес',
           signals: ['Виручка зростає, але маржа не зростає разом із нею', 'Продажі, фінанси й операційна команда працюють із різними версіями однієї цифри', 'Засновник залишається фінальною точкою для погоджень, винятків і рішень', 'Процес працює завдяки сильним людям, але не витримує передачі новій команді', 'Ручні звірки й контроль забирають ресурс, який мав би йти на зростання'],
-          stepsLabel: 'Як це працює', stepsTitle: 'Чотири кроки, оплата двома частинами',
+          stepsLabel: 'Як це працює', stepsTitle: 'Три кроки, оплата двома частинами',
           steps: [
-            ['Тижні 1-2. Проєктування', 'Розбираємо, як процес працює зараз, домовляємося, як він має працювати, і обираємо одну цифру для виміру. Ви погоджуєте план до того, як щось будується.'],
-            ['Тижні 3-6. Побудова', 'Я вбудовую систему в реальну роботу команди й тестую її на живих випадках.'],
-            ['Передача', 'Команда отримує систему, правила й цифру, за якою стежити.'],
-            ['Через 30 днів після запуску', 'Звіряємо результат з погодженою цифрою.']
+            ['Тижні 1-2. Проєктуємо рішення', 'Ви погоджуєте план до того, як щось будується.'],
+            ['Тижні 3-6. Будую й передаю команді', 'У реальній роботі команди, перевірено на живих випадках.'],
+            ['Через 30 днів. Звіряємо цифру', 'З тією, яку погодили на старті.']
           ],
           includesLabel: 'Що входить', includesTitle: 'Одна система, яка працює без вас',
           items: ['Один процес, який більше не залежить від ручного контролю засновника', 'Узгоджені правила, відповідальність і дані між командами', 'Одна головна метрика, за якою видно результат', 'AI й автоматизації лише там, де вони зменшують витрати або збільшують ресурс команди', 'Робоча система, передана команді та перевірена через 30 днів'],
@@ -250,7 +242,6 @@
     document.getElementById('header-cta').textContent = navLabels.cta;
     document.getElementById('cta-link').textContent = ui.cta;
     document.getElementById('footer-line').textContent = ui.footer;
-    document.getElementById('role-fit').textContent = copy.roleFit;
     document.getElementById('transition-note').textContent = copy.transition;
 
     ['en-link', 'mobile-en-link'].forEach(id => { const el = document.getElementById(id); if (el) el.href = `service.html?offer=${currentOffer}`; });
@@ -262,7 +253,7 @@
 
     // Voice rule: no em dashes in visible copy. Short dashes in ranges (4–7) stay.
     const presentationText = value => String(value).replace(/\s*—\s*/g, ', ');
-    ['eyebrow', 'title', 'lead', 'sideLabel', 'sideText', 'fitLabel', 'fitTitle', 'fitText', 'signalsLabel', 'signalsTitle', 'stepsLabel', 'stepsTitle', 'includesLabel', 'includesTitle', 'boundariesLabel', 'boundariesTitle', 'ctaLabel', 'ctaTitle', 'ctaText']
+    ['title', 'lead', 'sideLabel', 'sideText', 'fitLabel', 'fitTitle', 'fitText', 'signalsLabel', 'signalsTitle', 'stepsLabel', 'stepsTitle', 'includesLabel', 'includesTitle', 'boundariesLabel', 'boundariesTitle', 'ctaLabel', 'ctaTitle', 'ctaText']
       .forEach(key => document.getElementById(key.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`)).textContent = presentationText(copy[key]));
 
     const addTextRow = (target, item, index) => {
