@@ -166,6 +166,49 @@
       }
     }
   </style>
+
+<style data-purpose="embedded-visuals">
+  .viz { background:#fff; border:1px solid #E2E3E8; border-radius:20px; padding:32px 36px; box-shadow:0 18px 45px rgba(17,18,21,.06); text-align:left; color:#111215; }
+  .viz .viz-top { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .viz .viz-label { font-family:ui-monospace, 'JetBrains Mono', monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#5B6F95; }
+  .viz .viz-tag { font-size:12px; color:#999; border:1px solid #E7E8EB; border-radius:999px; padding:4px 10px; }
+  .viz h3 { font-size:28px; font-weight:500; letter-spacing:-.03em; margin:10px 0 4px; }
+  .viz .viz-sub { color:#666; font-size:15px; margin:0 0 22px; }
+  .viz .viz-stats { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #E7E8EB; border-bottom:1px solid #E7E8EB; margin-bottom:22px; }
+  .viz .viz-stats > div { padding:14px 0; }
+  .viz .viz-stats > div + div { border-left:1px solid #E7E8EB; padding-left:18px; }
+  .viz .viz-k { font-size:12px; color:#999; margin-bottom:6px; }
+  .viz .viz-v { font-size:21px; font-weight:500; letter-spacing:-.02em; }
+  .viz .viz-note { font-size:12px; color:#999; margin-top:4px; }
+  .viz table { width:100%; border-collapse:collapse; font-size:14px; }
+  .viz th { text-align:left; font-weight:500; color:#999; font-size:12px; padding:0 12px 10px 0; border-bottom:1px solid #E7E8EB; }
+  .viz td { padding:13px 12px 13px 0; border-bottom:1px solid #E7E8EB; vertical-align:top; }
+  .viz td.viz-main { font-weight:500; width:34%; }
+  .viz td.viz-main span, .viz td.viz-num span { display:block; font-weight:400; color:#666; font-size:12.5px; margin-top:3px; }
+  .viz td.viz-num { white-space:nowrap; font-weight:500; }
+  .viz .viz-pill { display:inline-block; font-size:12px; border-radius:999px; padding:4px 10px; white-space:nowrap; }
+  .viz .viz-now { background:#111215; color:#fff; } .viz .viz-next { background:#EEF1F6; color:#5B6F95; } .viz .viz-later { background:#F4F5F7; color:#6B7280; } .viz .viz-no { border:1px dashed #C9CCD3; color:#6B7280; }
+  .viz .viz-box { margin-top:20px; padding:15px 17px; background:#F4F5F7; border-radius:12px; font-size:14px; }
+  .viz .viz-box b { font-weight:600; }
+  .viz .viz-rules { margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .viz .viz-rule { background:#F4F5F7; border-radius:12px; padding:13px 15px; font-size:14px; }
+  .viz .viz-rule b { display:block; font-weight:600; margin-bottom:3px; }
+  .viz .viz-foot { margin-top:14px; font-size:12px; color:#999; }
+  [data-viz-lang="ua"] { display:none; }
+  html[lang="uk"] [data-viz-lang="ua"] { display:block; }
+  html[lang="uk"] [data-viz-lang="en"] { display:none; }
+  @media (max-width:860px) { .viz .viz-stats { grid-template-columns:1fr 1fr; } .viz .viz-stats > div:nth-child(3) { border-left:none; padding-left:0; } .viz .viz-stats > div:nth-child(n+3) { border-top:1px solid #E7E8EB; } }
+  @media (max-width:640px) {
+    .viz { padding:22px 16px; border-radius:16px; }
+    .viz h3 { font-size:23px; }
+    .viz .viz-stats { grid-template-columns:1fr; }
+    .viz .viz-stats > div + div { border-left:none; padding-left:0; border-top:1px solid #E7E8EB; }
+    .viz th:nth-child(3), .viz td:nth-child(3) { display:none; }
+    .viz td.viz-main { width:auto; }
+    .viz td.viz-num { white-space:normal; }
+    .viz .viz-rules { grid-template-columns:1fr; }
+  }
+</style>
 <!-- END: Custom Styles -->
 </head>
 <body class="bg-[#FAFAFA] text-[#111215] selection:bg-[#111215] selection:text-white" id="top">
@@ -602,6 +645,12 @@
 <div class="text-sm sm:text-base text-[#666666] font-normal">AI systems and operational automations</div>
 </div>
 </div>
+<!-- BEGIN: FounderPanel -->
+<div class="max-w-5xl mx-auto mt-4" data-purpose="founder-panel">
+<div class="viz" data-viz-lang="en"><div class="viz-top"><span class="viz-label">Built and run for a wellness brand</span><span class="viz-tag">Real figures · brand name removed</span></div><h3>What the system tracks every week</h3><p class="viz-sub">A founder-led wellness brand, selling online and through retail partners. Each system answers one question the founder used to answer by hand.</p><div class="viz-stats"><div><div class="viz-k">Manual work replaced</div><div class="viz-v">12–13 h / week</div><div class="viz-note">my estimate, now under 3 h of review</div></div><div><div class="viz-k">Marketing spend</div><div class="viz-v">−90%</div><div class="viz-note">after the P&L showed 37% was fixed retainers</div></div><div><div class="viz-k">Numbers ready</div><div class="viz-v">Every week</div><div class="viz-note">not at month-end</div></div><div><div class="viz-k">Sent without approval</div><div class="viz-v">0</div><div class="viz-note">every send waits for a yes</div></div></div><table><thead><tr><th>System</th><th>What the founder sees each week</th><th>Replaced</th></tr></thead><tbody><tr><td class="viz-main">Sales and stock pulse<span>Every order in one log</span></td><td>Orders, units by product, stock left, what to reorder</td><td class="viz-num">~2.5 h / week</td></tr><tr><td class="viz-main">Retail partner payments<span>Shipped minus paid</span></td><td>Who owes what, units still at each partner</td><td class="viz-num">~1.5 h / week</td></tr><tr><td class="viz-main">Monthly P&L<span>Revenue, spend, profit before COGS</span></td><td>Showed 37% of marketing was fixed retainers that did not move with sales</td><td class="viz-num">~1.5 h / week</td></tr><tr><td class="viz-main">Content and newsletters<span>Plan, drafts, carousels from templates</span></td><td>Next week's posts and email in the brand's voice, ready to approve</td><td class="viz-num">~7 h / week</td></tr></tbody></table><div class="viz-rules"><div class="viz-rule"><b>No receipt, no result</b>A routine counts as done only when it leaves a record the founder can check.</div><div class="viz-rule"><b>Drafts, not sends</b>Emails, posts and partner messages wait for the founder's yes.</div></div><div class="viz-foot">The same setup I build in Money on the Table: one process, one owner, one number checked every week.</div></div>
+<div class="viz" data-viz-lang="ua"><div class="viz-top"><span class="viz-label">Побудовано й ведеться для wellness-бренду</span><span class="viz-tag">Реальні цифри · назву прибрано</span></div><h3>Що система рахує щотижня</h3><p class="viz-sub">Wellness-бренд, яким керує засновниця, продає онлайн і через рітейл-партнерів. Кожна система відповідає на одне питання, на яке засновниця раніше відповідала вручну.</p><div class="viz-stats"><div><div class="viz-k">Ручної роботи замінено</div><div class="viz-v">12–13 год / тижд</div><div class="viz-note">моя оцінка, тепер до 3 год перевірки</div></div><div><div class="viz-k">Маркетингові витрати</div><div class="viz-v">−90%</div><div class="viz-note">після того, як P&L показав 37% фіксованих ретейнерів</div></div><div><div class="viz-k">Цифри готові</div><div class="viz-v">Щотижня</div><div class="viz-note">а не в кінці місяця</div></div><div><div class="viz-k">Надіслано без погодження</div><div class="viz-v">0</div><div class="viz-note">кожна відправка чекає «так»</div></div></div><table><thead><tr><th>Система</th><th>Що засновниця бачить щотижня</th><th>Замінено</th></tr></thead><tbody><tr><td class="viz-main">Пульс продажів і залишків<span>Усі замовлення в одному журналі</span></td><td>Замовлення, продажі по продуктах, залишок, що дозамовити</td><td class="viz-num">~2,5 год / тижд</td></tr><tr><td class="viz-main">Оплати рітейл-партнерів<span>Відвантажено мінус оплачено</span></td><td>Хто скільки винен, скільки товару ще в кожного партнера</td><td class="viz-num">~1,5 год / тижд</td></tr><tr><td class="viz-main">Помісячний P&L<span>Виручка, витрати, прибуток до собівартості</span></td><td>Показав, що 37% маркетингу це фіксовані ретейнери, які не змінювались разом із продажами</td><td class="viz-num">~1,5 год / тижд</td></tr><tr><td class="viz-main">Контент і розсилки<span>План, чернетки, каруселі за шаблоном</span></td><td>Пости й лист на наступний тиждень у тоні бренду, готові до погодження</td><td class="viz-num">~7 год / тижд</td></tr></tbody></table><div class="viz-rules"><div class="viz-rule"><b>Немає квитанції, немає результату</b>Рутина вважається виконаною, лише коли лишила запис, який засновниця може перевірити.</div><div class="viz-rule"><b>Чернетки, а не відправки</b>Листи, пости й повідомлення партнерам чекають «так» засновниці.</div></div><div class="viz-foot">Таку саму систему я будую в Money on the Table: один процес, один відповідальний, одна цифра, яку перевіряємо щотижня.</div></div>
+</div>
+<!-- END: FounderPanel -->
 </section>
 <!-- END: ProofSection -->
 <!-- BEGIN: AboutSection (Calm editorial ratio with authentic portrait) -->
