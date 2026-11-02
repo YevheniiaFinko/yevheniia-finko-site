@@ -1,0 +1,20 @@
+# Yevheniia Finko
+
+> Founder, operator and AI systems strategist based in Barcelona. I help founder-led wellness, beauty and food brands find the one process that costs them the most money, then build an AI system their team runs without the founder. English and Ukrainian.
+
+I start with the work, the owner and the data people can trust, not with a tool. About 15 years of operating experience in hospitality, furniture production and wellness.
+
+## Pages
+
+- [Home](https://yevheniia-finko-site.vercel.app/code.html): who I help, how I work, two ways to start. Ukrainian version: https://yevheniia-finko-site.vercel.app/code.html?lang=ua
+- [Service](https://yevheniia-finko-site.vercel.app/service.html): Profit Leak Audit (3 weeks, a Money Map of where the brand loses money and founder time) and Money on the Table (one process fixed end to end, then a 30-day check). Ukrainian version: https://yevheniia-finko-site.vercel.app/service.html?lang=ua
+- [AI roles](https://yevheniia-finko-site.vercel.app/ai-roles.html): examples of AI roles built around one process and one business outcome: finance, supply and inventory, customer operations, marketing, business operations. Ukrainian version: https://yevheniia-finko-site.vercel.app/ai-roles.html?lang=ua
+
+## Contact
+
+- Book a 30-minute call: https://zcal.co/i/T9T2hWGX
+- LinkedIn: https://www.linkedin.com/in/yevheniiafinko/
+
+## Related
+
+- Free course "Claude That Knows You" (build your own personal system with Claude): https://claude-system.vercel.app/

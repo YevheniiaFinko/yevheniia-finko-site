@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://yevheniia-finko-site.vercel.app/code.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yevheniia-finko-site.vercel.app/code.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://yevheniia-finko-site.vercel.app/code.html?lang=ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yevheniia-finko-site.vercel.app/code.html"/>
+  </url>
+  <url>
+    <loc>https://yevheniia-finko-site.vercel.app/service.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yevheniia-finko-site.vercel.app/service.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://yevheniia-finko-site.vercel.app/service.html?lang=ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yevheniia-finko-site.vercel.app/service.html"/>
+  </url>
+  <url>
+    <loc>https://yevheniia-finko-site.vercel.app/ai-roles.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yevheniia-finko-site.vercel.app/ai-roles.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://yevheniia-finko-site.vercel.app/ai-roles.html?lang=ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yevheniia-finko-site.vercel.app/ai-roles.html"/>
+  </url>
+</urlset>

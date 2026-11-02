@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yevheniia-finko-site.vercel.app/sitemap.xml
