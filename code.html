@@ -837,6 +837,44 @@
 <div class="text-xs text-[#737373]">
         Or write directly to <a class="underline hover:text-[#111215] transition-colors" href="mailto:euheniia.finko@gmail.com">euheniia.finko@gmail.com</a>
 </div>
+<!-- BEGIN: InquiryForm -->
+<div class="max-w-xl mx-auto mt-14 pt-12 border-t border-[#E2E3E8] text-left" id="inquiry">
+<h3 class="text-xl sm:text-2xl font-medium tracking-tight text-[#111215] mb-2" id="iq-title">Prefer to write first?</h3>
+<p class="text-sm text-[#666666] leading-relaxed mb-8" id="iq-intro">Tell me what is taking your time or money. I read every message myself and answer personally.</p>
+<form id="iq-form" novalidate>
+<div class="space-y-5">
+<div>
+<label class="block text-xs font-medium text-[#111215] mb-1.5" for="iq-name" id="iq-l-name">Name</label>
+<input class="w-full rounded-lg border border-[#D2D3D8] bg-white px-3.5 py-2.5 text-sm text-[#111215] focus:border-[#5B6F95] focus:ring-[#5B6F95]" id="iq-name" name="name" type="text" autocomplete="name" maxlength="100" required/>
+</div>
+<div>
+<label class="block text-xs font-medium text-[#111215] mb-1.5" for="iq-email" id="iq-l-email">Email</label>
+<input class="w-full rounded-lg border border-[#D2D3D8] bg-white px-3.5 py-2.5 text-sm text-[#111215] focus:border-[#5B6F95] focus:ring-[#5B6F95]" id="iq-email" name="email" type="email" autocomplete="email" maxlength="150" required/>
+</div>
+<div>
+<label class="block text-xs font-medium text-[#111215] mb-1.5" for="iq-task" id="iq-l-task">What is the task?</label>
+<textarea class="w-full rounded-lg border border-[#D2D3D8] bg-white px-3.5 py-2.5 text-sm text-[#111215] focus:border-[#5B6F95] focus:ring-[#5B6F95]" id="iq-task" name="task" rows="5" maxlength="2000" required></textarea>
+</div>
+<div>
+<label class="block text-xs font-medium text-[#111215] mb-1.5" for="iq-budget"><span id="iq-l-budget">Budget range you have in mind</span> <span class="text-[#8F9094] font-normal" id="iq-opt">(optional)</span></label>
+<input class="w-full rounded-lg border border-[#D2D3D8] bg-white px-3.5 py-2.5 text-sm text-[#111215] focus:border-[#5B6F95] focus:ring-[#5B6F95]" id="iq-budget" name="budget" type="text" maxlength="80"/>
+</div>
+<!-- Honeypot: humans never see or fill these -->
+<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+<label for="iq-website">Website</label>
+<input id="iq-website" name="website" type="text" tabindex="-1" autocomplete="off"/>
+<input id="iq-botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off"/>
+</div>
+<div class="flex items-start gap-3">
+<input class="mt-1 h-4 w-4 rounded border-[#D2D3D8] text-[#111215] focus:ring-[#5B6F95]" id="iq-consent" name="consent" type="checkbox" required/>
+<label class="text-xs text-[#666666] leading-relaxed" for="iq-consent" id="iq-l-consent">I agree that Yevheniia Finko uses these details to reply to my message. <a class="underline" href="privacy.html">Privacy policy</a>.</label>
+</div>
+</div>
+<button class="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-[#111215] text-white text-sm font-medium hover:bg-neutral-800 transition shadow-sm disabled:opacity-60" id="iq-send" type="submit">[ Send message ]</button>
+<p class="mt-4 text-sm" id="iq-status" role="status" aria-live="polite" hidden></p>
+</form>
+</div>
+<!-- END: InquiryForm -->
 </div>
 </section>
 <!-- END: FinalCtaSection -->
@@ -856,7 +894,7 @@
 <!-- Right: Links -->
 <div class="flex items-center space-x-6 text-xs text-[#666666] font-normal">
 <a class="hover:text-[#111215] transition-colors" href="https://www.linkedin.com/in/yevheniiafinko/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-<span>Terms &amp; Privacy available on request</span>
+<a class="hover:text-[#111215] transition-colors" id="privacy-link" href="privacy.html">Privacy policy</a>
 </div>
 </div>
 </footer>
@@ -1192,6 +1230,64 @@
       // Headings keep inner sentence breaks; only a trailing period is dropped.
       if (node.parentElement?.closest('h1, h2')) text = text.replace(/\.(\s*)$/, '$1');
       node.textContent = text;
+    });
+  })();
+</script>
+<script data-purpose="inquiry-form">
+  (() => {
+    // Public Web3Forms access key (same one as the course site); mail goes to euheniia.finko@gmail.com
+    const KEY = 'c2646f4a-b962-45ab-ad14-e9d79abfbbd9';
+    const ua = new URLSearchParams(location.search).get('lang') === 'ua';
+    const T = ua ? {
+      title: 'Краще спершу написати?', intro: 'Розкажіть, що забирає ваш час або гроші. Я читаю кожне повідомлення сама й відповідаю особисто.',
+      name: 'Імʼя', email: 'Email', task: 'Яка задача?', budget: 'Бюджет, який ви маєте на увазі', opt: '(необовʼязково)',
+      consent: 'Погоджуюсь, що Євгенія Фінко використає ці дані, щоб відповісти на моє повідомлення. <a class="underline" href="privacy.html?lang=ua">Політика конфіденційності</a>.',
+      send: '[ Надіслати ]', sending: 'Надсилаю...',
+      errName: 'Вкажіть імʼя.', errEmail: 'Вкажіть коректний email.', errTask: 'Опишіть задачу кількома реченнями.', errConsent: 'Потрібна згода на обробку даних.',
+      ok: 'Дякую, повідомлення надіслано. Відповім вам на email.', err: 'Не вдалося надіслати. Спробуйте ще раз або напишіть на euheniia.finko@gmail.com.', privacy: 'Політика конфіденційності'
+    } : {
+      title: 'Prefer to write first?', intro: 'Tell me what is taking your time or money. I read every message myself and answer personally.',
+      name: 'Name', email: 'Email', task: 'What is the task?', budget: 'Budget range you have in mind', opt: '(optional)',
+      consent: 'I agree that Yevheniia Finko uses these details to reply to my message. <a class="underline" href="privacy.html">Privacy policy</a>.',
+      send: '[ Send message ]', sending: 'Sending...',
+      errName: 'Please enter your name.', errEmail: 'Please enter a valid email.', errTask: 'Please describe the task in a few sentences.', errConsent: 'Consent to data processing is required.',
+      ok: 'Thank you, your message is sent. I will reply to your email.', err: 'Could not send. Please try again or write to euheniia.finko@gmail.com.', privacy: 'Privacy policy'
+    };
+    const $ = id => document.getElementById(id);
+    const form = $('iq-form');
+    if (!form) return;
+    $('iq-title').textContent = T.title; $('iq-intro').textContent = T.intro;
+    $('iq-l-name').textContent = T.name; $('iq-l-email').textContent = T.email; $('iq-l-task').textContent = T.task;
+    $('iq-l-budget').textContent = T.budget; $('iq-opt').textContent = T.opt;
+    $('iq-l-consent').innerHTML = T.consent; $('iq-send').textContent = T.send;
+    const foot = $('privacy-link');
+    if (foot) { foot.textContent = T.privacy; foot.href = ua ? 'privacy.html?lang=ua' : 'privacy.html'; }
+    const st = $('iq-status');
+    const say = (msg, good) => { st.hidden = false; st.textContent = msg; st.className = 'mt-4 text-sm ' + (good ? 'text-green-700' : 'text-red-700'); };
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const name = $('iq-name').value.trim(), email = $('iq-email').value.trim(), task = $('iq-task').value.trim(), budget = $('iq-budget').value.trim();
+      if (!name) return say(T.errName), $('iq-name').focus();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return say(T.errEmail), $('iq-email').focus();
+      if (task.length < 10) return say(T.errTask), $('iq-task').focus();
+      if (!$('iq-consent').checked) return say(T.errConsent), $('iq-consent').focus();
+      // Honeypot filled: pretend success, send nothing
+      if ($('iq-website').value || $('iq-botcheck').checked) { say(T.ok, true); form.reset(); return; }
+      const btn = $('iq-send'); btn.disabled = true; btn.textContent = T.sending;
+      try {
+        const r = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: KEY, subject: '[Landing inquiry] ' + name, from_name: 'Landing form (yevheniia-finko-site)',
+            name, email, message: task, budget: budget || '-', lang: ua ? 'ua' : 'en', consent: 'yes', page: location.pathname, botcheck: ''
+          })
+        });
+        const j = await r.json();
+        if (!j.success) throw new Error('send');
+        say(T.ok, true); form.reset();
+        try { window.va && window.va('event', { name: 'inquiry_submit', data: { lang: ua ? 'ua' : 'en' } }); } catch (_) {}
+      } catch (_) { say(T.err); }
+      finally { btn.disabled = false; btn.textContent = T.send; }
     });
   })();
 </script>
